@@ -1,4 +1,7 @@
+import 'package:device_manager/Components/device_item.dart';
+import 'package:device_manager/data/data.dart';
 import 'package:flutter/material.dart';
+import 'package:device_manager/Models/Device.dart';
 
 class HomeDevices extends StatefulWidget {
   const HomeDevices({Key? key}) : super(key: key);
@@ -47,128 +50,9 @@ class _HomeDevicesState extends State<HomeDevices> {
         body: GridView.count(
             crossAxisCount: 4,
             childAspectRatio: 3 / 2,
-            children: [
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-              Card(
-                  margin: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                  child: ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                      primary: Colors.blueGrey,
-                      onPrimary: Colors.white,
-                    ),
-                    onPressed: () {},
-                    child: Icon(Icons.device_unknown),
-                  )),
-            ]),
+            children: DUMMY_DEVICES.map((device) {
+              return DeviceItem(device);
+            }).toList()),
       ),
     );
   }
